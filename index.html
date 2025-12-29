@@ -3,645 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Testament Evangelical Church - Kitintale, Kampala</title>
+    <title>New Testament Evangelical Church Kampala | Christ-Centered City Church</title>
+    <meta name="description" content="New Testament Evangelical Church — Preaching Christ, Transforming Lives. Join us for worship in Kampala or watch our services live online.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1a4d8c;
-            --secondary: #d4a017;
-            --accent: #8b0000;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --gray: #6c757d;
-            --shadow: 0 5px 15px rgba(0,0,0,0.1);
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: #fff;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: white;
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0;
-            color: var(--primary);
-        }
-        
-        .logo span {
-            color: var(--secondary);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover {
-            color: var(--secondary);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--primary);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 180px 0 120px;
-            text-align: center;
-            margin-top: 80px;
-        }
-        
-        .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: white;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
-        }
-        
-        /* Service Times */
-        .service-times {
-            background-color: var(--light);
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-        
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--secondary);
-        }
-        
-        .service-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-card i {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-        
-        .service-card h3 {
-            margin-bottom: 15px;
-        }
-        
-        .service-card .time {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-        
-        /* Ministries */
-        .ministries {
-            padding: 80px 0;
-        }
-        
-        .ministry-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        
-        .ministry-item {
-            background-color: var(--light);
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            transition: var(--transition);
-        }
-        
-        .ministry-item:hover {
-            background-color: var(--primary);
-            color: white;
-            transform: translateY(-5px);
-        }
-        
-        .ministry-item:hover h4 {
-            color: white;
-        }
-        
-        .ministry-item i {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background-color: var(--light);
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .about-text h2 {
-            font-size: 2.5rem;
-            line-height: 1.3;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-        }
-        
-        .about-image {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 60px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column h3 {
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--secondary);
-        }
-        
-        .footer-column p, .footer-column a {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 10px;
-            display: block;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .footer-column a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-        
-        .social-icons a:hover {
-            background-color: var(--secondary);
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h2 {
-                font-size: 2.8rem;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                background-color: white;
-                width: 100%;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: var(--shadow);
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: var(--transition);
-                z-index: 999;
-            }
-            
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            
-            .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero {
-                padding: 150px 0 80px;
-            }
-            
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .service-card {
-                padding: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="header-container container">
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
             <div class="logo">
-                <h1>NTEC<span>Church</span></h1>
+                <h1><span class="logo-highlight">NTEC</span> Kampala</h1>
+                <p class="tagline">New Testament Evangelical Church</p>
             </div>
-            
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </div>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#ministries">Ministries</a></li>
-                <li><a href="#cells">Cells</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#sermons">Sermons</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
-            <h2>New Testament Evangelical Church</h2>
-            <p>A vibrant Christian community in Kitintale, Kampala, Uganda, preaching the whole Bible and New Testament realities for over 30 years.</p>
-            <p>Under the leadership of Bishop Mutebi</p>
-            <a href="#services" class="btn">Join Our Services</a>
-        </div>
-    </section>
-
-    <!-- Service Times -->
-    <section class="service-times" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Service Times</h2>
-                <p>Join us for worship and fellowship</p>
-            </div>
-            
-            <div class="service-cards">
-                <div class="service-card">
-                    <i class="fas fa-sun"></i>
-                    <h3>Sunday Morning Service</h3>
-                    <div class="time">8:00 AM - 10:00 AM</div>
-                    <p>A time of intimate worship and teaching</p>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-church"></i>
-                    <h3>Sunday Main Service</h3>
-                    <div class="time">10:00 AM - 1:00 PM</div>
-                    <p>Powerful worship, preaching and ministry</p>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-pray"></i>
-                    <h3>Wednesday Service</h3>
-                    <div class="time">6:00 PM - 8:00 PM</div>
-                    <p>Midweek revival and prayer meeting</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ministries Section -->
-    <section class="ministries" id="ministries">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Ministries</h2>
-                <p>Serving God by serving people in different capacities</p>
-            </div>
-            
-            <div class="ministry-grid">
-                <div class="ministry-item">
-                    <i class="fas fa-users"></i>
-                    <h4>Youth Ministry</h4>
-                    <p>Empowering the next generation for Christ</p>
-                </div>
-                
-                <div class="ministry-item">
-                    <i class="fas fa-handshake"></i>
-                    <h4>Prisons Ministry</h4>
-                    <p>Bringing hope to the incarcerated</p>
-                </div>
-                
-                <div class="ministry-item">
-                    <i class="fas fa-hospital"></i>
-                    <h4>Hospital Ministry</h4>
-                    <p>Comfort and prayer for the sick</p>
-                </div>
-                
-                <div class="ministry-item">
-                    <i class="fas fa-cross"></i>
-                    <h4>Evangelism</h4>
-                    <p>Spreading the Gospel to all nations</p>
-                </div>
-                
-                <div class="ministry-item">
-                    <i class="fas fa-door-open"></i>
-                    <h4>Ushering</h4>
-                    <p>Creating a welcoming atmosphere</p>
-                </div>
-                
-                <div class="ministry-item">
-                    <i class="fas fa-music"></i>
-                    <h4>Worship Team & Choir</h4>
-                    <p>Leading the congregation in worship</p>
-                </div>
-                
-                <div class="ministry-item">
-                    <i class="fas fa-child"></i>
-                    <h4>Children's Ministry</h4>
-                    <p>Sunday school for our young ones</p>
-                </div>
-                
-                <div class="ministry-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h4>Bible School</h4>
-                    <p>Training pastors and church leaders</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Over 30 Years of Ministry in Uganda</h2>
-                    <p>New Testament Evangelical Church (NTEC) was founded over three decades ago in Kitintale, Kampala, with a vision to preach the whole Bible and New Testament realities to Uganda and beyond.</p>
-                    <p>Under the faithful leadership of Bishop Mutebi, the church has grown to include multiple ministries, cells across Kampala and Uganda, a vibrant worship team, and a Bible school for training pastors.</p>
-                    <p>We believe in the power of the Holy Spirit, the authority of Scripture, and the commission to make disciples of all nations.</p>
-                    
-                    <div style="margin-top: 30px;">
-                        <h3>Our Cells</h3>
-                        <p>NTEC has home fellowship cells in different areas of Kampala and across Uganda. These cells meet during the week for Bible study, prayer, and fellowship.</p>
-                        <a href="#cells" class="btn">Find a Cell Near You</a>
+            <div class="hero-content">
+                <div class="church-identity">
+                    <h2 class="church-name">New Testament Evangelical Church</h2>
+                    <p class="identity-line">Preaching Christ, Transforming Lives</p>
+                    <div class="years-badge">
+                        <span>30+</span> Years of Faithful Ministry
                     </div>
                 </div>
                 
-                <div class="about-image">
-                    <!-- Church image placeholder -->
-                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="New Testament Evangelical Church">
+                <div class="service-times">
+                    <h3><i class="far fa-clock"></i> Join Us This Sunday</h3>
+                    <div class="times-grid">
+                        <div class="time-card main-service">
+                            <h4>Main Service</h4>
+                            <p class="time">9:00 AM - 11:30 AM</p>
+                            <p class="desc">Worship & Sermon</p>
+                        </div>
+                        <div class="time-card">
+                            <h4>Sunday School</h4>
+                            <p class="time">8:00 AM - 8:45 AM</p>
+                            <p class="desc">All Ages</p>
+                        </div>
+                        <div class="time-card">
+                            <h4>Evening Service</h4>
+                            <p class="time">5:00 PM - 6:30 PM</p>
+                            <p class="desc">Prayer & Fellowship</p>
+                        </div>
+                    </div>
                 </div>
+                
+                <div class="cta-buttons">
+                    <a href="#visit" class="btn btn-primary">
+                        <i class="fas fa-church"></i> Visit Us
+                    </a>
+                    <a href="#watch" class="btn btn-secondary">
+                        <i class="fab fa-youtube"></i> Watch Live
+                    </a>
+                    <a href="#cells" class="btn btn-outline">
+                        <i class="fas fa-users"></i> Join a Cell
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="window-frame">
+                    <div class="city-view"></div>
+                    <div class="window-reflections"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro" id="about">
+        <div class="container">
+            <div class="intro-content">
+                <h2>A Living Church in the Heart of Kampala</h2>
+                <p>For over 30 years, New Testament Evangelical Church has been a beacon of hope and transformation in Kampala. We're not just a religious institution—we're a vibrant community where lives are changed through the power of the Gospel.</p>
+                <p>Our mission is simple: to preach Christ crucified and risen, and to see His transforming power at work in every person who walks through our doors.</p>
+                <div class="credentials">
+                    <div class="credential">
+                        <i class="fas fa-cross"></i>
+                        <h4>Christ-Centered</h4>
+                        <p>Everything we do points to Jesus</p>
+                    </div>
+                    <div class="credential">
+                        <i class="fas fa-hands-helping"></i>
+                        <h4>Community Focused</h4>
+                        <p>Building genuine relationships</p>
+                    </div>
+                    <div class="credential">
+                        <i class="fas fa-bible"></i>
+                        <h4>Bible-Based</h4>
+                        <p>Teaching God's Word with clarity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Sermon Section -->
+    <section class="sermon-section" id="sermons">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fab fa-youtube"></i> Latest Sermon</h2>
+                <p>Watch our most recent message or join us live on Sundays</p>
+            </div>
+            
+            <div class="sermon-container">
+                <div class="sermon-embed">
+                    <!-- YouTube Embed Placeholder -->
+                    <div class="video-placeholder">
+                        <div class="video-thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Latest Sermon Thumbnail">
+                        </div>
+                        <div class="video-info">
+                            <h3>The Transforming Power of Grace</h3>
+                            <p class="sermon-meta">Preached by Pastor James on October 15, 2023</p>
+                            <p class="sermon-description">Discover how God's grace can transform even the most broken areas of our lives and bring hope where there seems to be none.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sermon-actions">
+                    <a href="https://youtube.com/c/NTECKampala" class="youtube-link" target="_blank">
+                        <i class="fab fa-youtube"></i> Subscribe to Our YouTube Channel
+                    </a>
+                    <a href="#sermon-archive" class="archive-link">
+                        <i class="fas fa-archive"></i> View Sermon Archive
+                    </a>
+                    <div class="live-indicator">
+                        <div class="pulse"></div>
+                        <span>Live every Sunday at 9:00 AM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Us Section -->
+    <section class="visit-section" id="visit">
+        <div class="container">
+            <div class="visit-content">
+                <h2>We'd Love to Welcome You</h2>
+                <div class="visit-details">
+                    <div class="address">
+                        <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+                        <p>123 Gospel Street, Kampala, Uganda</p>
+                        <p>Located in the heart of the city with easy access from all directions.</p>
+                    </div>
+                    <div class="contact-info">
+                        <h3><i class="fas fa-phone-alt"></i> Contact Us</h3>
+                        <p>Phone: +256 123 456 789</p>
+                        <p>Email: info@ntechurchkampala.org</p>
+                    </div>
+                </div>
+                <a href="https://maps.google.com/?q=123+Gospel+Street+Kampala" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>NTEC Church</h3>
-                    <p>New Testament Evangelical Church (NTEC) is a vibrant Christian community in Kitintale, Kampala, Uganda, preaching the whole Bible and New Testament realities for over 30 years.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                <div class="footer-brand">
+                    <h3>New Testament Evangelical Church</h3>
+                    <p class="identity-line">Preaching Christ, Transforming Lives</p>
+                    <p class="footer-tagline">A vibrant, Christ-centered community in Kampala for over 30 years.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#leadership">Our Leadership</a></li>
+                            <li><a href="#beliefs">Our Beliefs</a></li>
+                            <li><a href="#ministries">Ministries</a></li>
+                        </ul>
                     </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Kitintale, Kampala, Uganda</p>
-                    <p><i class="fas fa-phone" style="margin-right: 10px;"></i> +256 XXX XXX XXX</p>
-                    <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> info@ntecchurch.org</p>
-                    <p><i class="fas fa-clock" style="margin-right: 10px;"></i> Office Hours: Mon-Fri 9AM-5PM</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <a href="#home">Home</a>
-                    <a href="#about">About Us</a>
-                    <a href="#services">Services</a>
-                    <a href="#ministries">Ministries</a>
-                    <a href="#cells">Cells</a>
-                    <a href="#contact">Contact Us</a>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#sermons">Sermons</a></li>
+                            <li><a href="#events">Events</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#give">Give</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social Media</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div class="copyright">
-                <p>&copy; 2023 New Testament Evangelical Church (NTEC). All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 New Testament Evangelical Church Kampala. All rights reserved.</p>
+                <p class="seo-note">Christ-centered church in Kampala, Uganda | Transforming lives through the Gospel</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
-  </html>
+</html>
